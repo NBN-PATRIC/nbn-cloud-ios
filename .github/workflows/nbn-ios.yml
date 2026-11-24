@@ -1,0 +1,71 @@
+# NBN Cloud iOS: confere que o fork compila, para o SIMULADOR e sem assinatura.
+# Instalar em iPhone exige a conta Apple Developer da NBN (ver branding/README.md).
+# Repositório público: roda no runner do GitHub, de graça e fora da cota da org.
+name: nbn-ios
+
+on:
+  push:
+    branches: ['nbn/**']
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  simulador:
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Xcode pedido em .xcode-version
+        run: |
+          set -e
+          ls -d /Applications/Xcode*.app
+          XC="/Applications/Xcode_$(cat .xcode-version).app"
+          if [ -d "$XC" ]; then sudo xcode-select -s "$XC"; else echo "::warning::$XC não está no runner; usando o padrão"; fi
+          xcodebuild -version
+
+      - name: Compilar (simulador, sem assinatura)
+        run: |
+          set -o pipefail
+          mkdir -p build
+          xcodebuild -project ownCloud.xcodeproj -scheme ownCloud -configuration Debug \
+            -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build/dd \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            build 2>&1 | tee build/xcodebuild.log | grep -E "error:|warning: .*Branding|\*\* BUILD" || true
+          grep -q "\*\* BUILD SUCCEEDED \*\*" build/xcodebuild.log
+
+      - name: Conferir marca e identidade do app
+        run: |
+          set -e
+          APP=$(ls -d build/dd/Build/Products/Debug-iphonesimulator/*.app | head -1)
+          echo "app: $APP"
+          ID=$(/usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP/Info.plist")
+          NOME=$(/usr/libexec/PlistBuddy -c "Print :CFBundleDisplayName" "$APP/Info.plist")
+          echo "bundle id: $ID / nome: $NOME"
+          test "$ID" = "br.com.nbntelecom.cloud"
+          test "$NOME" = "NBN Cloud"
+          /usr/libexec/PlistBuddy -c "Print :branding.app-name" "$APP/Branding.plist"
+          ls -l "$APP"/branding-*.png
+          for ext in "$APP"/PlugIns/*.appex; do
+            printf '%s: ' "$(basename "$ext")"
+            /usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$ext/Info.plist"
+          done
+
+      - name: Guardar o log (conferência)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        continue-on-error: true
+        with:
+          name: xcodebuild-log
+          path: build/xcodebuild.log
+          retention-days: 7
