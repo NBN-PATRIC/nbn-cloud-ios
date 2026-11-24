@@ -7,139 +7,139 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Teilen mit ownCloud"
+            "value" : "Teilen mit NBN Cloud"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "eu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Condividi su ownCloud"
+            "value" : "Condividi su NBN Cloud"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "lo" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "mk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "nb-NO" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "nn-NO" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Compartilhar no ownCloud"
+            "value" : "Compartilhar no NBN Cloud"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ndajeni në ownCloud"
+            "value" : "Ndajeni në NBN Cloud"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "th-TH" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share to ownCloud"
+            "value" : "Share to NBN Cloud"
           }
         }
       }

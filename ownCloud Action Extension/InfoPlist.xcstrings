@@ -7,91 +7,91 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Desa a ownCloud"
+            "value" : "Desa a NBN Cloud"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Save to ownCloud"
+            "value" : "Save to NBN Cloud"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Speichern in ownCloud"
+            "value" : "Speichern in NBN Cloud"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Save to ownCloud"
+            "value" : "Save to NBN Cloud"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Save to ownCloud"
+            "value" : "Save to NBN Cloud"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Save to ownCloud"
+            "value" : "Save to NBN Cloud"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Salva su ownCloud"
+            "value" : "Salva su NBN Cloud"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Save to ownCloud"
+            "value" : "Save to NBN Cloud"
           }
         },
         "lo" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Save to ownCloud"
+            "value" : "Save to NBN Cloud"
           }
         },
         "mk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Save to ownCloud"
+            "value" : "Save to NBN Cloud"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сохранить в ownCloud"
+            "value" : "Сохранить в NBN Cloud"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ruajeni në ownCloud"
+            "value" : "Ruajeni në NBN Cloud"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Save to ownCloud"
+            "value" : "Save to NBN Cloud"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Save to ownCloud"
+            "value" : "Save to NBN Cloud"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Save to ownCloud"
+            "value" : "Save to NBN Cloud"
           }
         }
       }

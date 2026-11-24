@@ -911,4 +911,45 @@ end
     end
 
   end
+
+  # NBN Cloud: IPA assinado com o time da NBN. Nada de time, certificado ou perfil fica no repositório:
+  # tudo vem do ambiente (branding/README.md, "Instalar em iPhone").
+  #   NBN_APPLE_TEAM_ID      Team ID da conta Apple Developer da NBN (obrigatório)
+  #   NBN_SIGN_IDENTITY      ex.: "Apple Distribution: NBN Telecom (TEAMID)" (obrigatório)
+  #   NBN_EXPORT_METHOD      ad-hoc (padrão), app-store ou enterprise
+  #   NBN_PROFILE_PREFIX     prefixo dos perfis de provisionamento (padrão "NBN Cloud"); cada perfil se chama
+  #                          "<prefixo> <alvo> <método>", ex.: "NBN Cloud App ad-hoc", "NBN Cloud File Provider ad-hoc"
+  desc "NBN Cloud: IPA assinado com o time da NBN (variáveis NBN_*)"
+  lane :nbn_build do |values|
+    team = ENV["NBN_APPLE_TEAM_ID"].to_s
+    identity = ENV["NBN_SIGN_IDENTITY"].to_s
+    UI.user_error!("defina NBN_APPLE_TEAM_ID e NBN_SIGN_IDENTITY") if team.empty? || identity.empty?
+    method = (ENV["NBN_EXPORT_METHOD"] || "ad-hoc")
+    prefix = (ENV["NBN_PROFILE_PREFIX"] || "NBN Cloud")
+    perfil = ->(alvo) { "#{prefix} #{alvo} #{method}" }
+    build_ipa_in_house(
+      ENTERPRISE_APP_ID: "br.com.nbntelecom.cloud",
+      ENTERPRISE_APP_PROFILE: perfil.("App"),
+      ENTERPRISE_FP_ID: "br.com.nbntelecom.cloud.ownCloud-File-Provider",
+      ENTERPRISE_FP_PROFILE: perfil.("File Provider"),
+      ENTERPRISE_FP_UI_ID: "br.com.nbntelecom.cloud.ownCloud-File-ProviderUI",
+      ENTERPRISE_FP_UI_PROFILE: perfil.("File Provider UI"),
+      ENTERPRISE_INTENT_ID: "br.com.nbntelecom.cloud.ownCloud-Intents",
+      ENTERPRISE_INTENT_PROFILE: perfil.("Intents"),
+      ENTERPRISE_SHARE_EXTENSION_ID: "br.com.nbntelecom.cloud.ownCloud-Share-Extension",
+      ENTERPRISE_SHARE_EXTENSION_PROFILE: perfil.("Share Extension"),
+      ENTERPRISE_ACTION_EXTENSION_ID: "br.com.nbntelecom.cloud.ownCloud-Action-Extension",
+      ENTERPRISE_ACTION_EXTENSION_PROFILE: perfil.("Action Extension"),
+      ENTERPRISE_APP_FW_ID: "com.owncloud.ownCloudApp",
+      ENTERPRISE_TEAM: team,
+      ENTERPRISE_IDENTITY: identity,
+      APP_GROUP_IDENTIFIERS: "group.br.com.nbntelecom.cloud",
+      EXPORT_METHOD: method,
+      CONFIGURATION: "Release",
+      BETA_APP_ICON: false,
+      APP_NAME: "NBN Cloud",
+      BUILD_NUMBER: values[:BUILD_NUMBER]
+    )
+  end
+
 end

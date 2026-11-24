@@ -5256,7 +5256,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APP_BUILD_FLAGS = "$(inherited)";
 				APP_BUILD_FLAGS_SWIFT = "$(APP_BUILD_FLAGS)";
-				APP_PRODUCT_NAME = ownCloud;
+				APP_PRODUCT_NAME = "NBN Cloud";
 				APP_SHORT_VERSION = 12.7.1;
 				APP_VERSION = 303;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -5327,7 +5327,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APP_BUILD_FLAGS = "$(inherited)";
 				APP_BUILD_FLAGS_SWIFT = "$(APP_BUILD_FLAGS)";
-				APP_PRODUCT_NAME = ownCloud;
+				APP_PRODUCT_NAME = "NBN Cloud";
 				APP_SHORT_VERSION = 12.7.1;
 				APP_VERSION = 303;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -5417,7 +5417,7 @@
 					OCLocalizedFormat,
 				);
 				MARKETING_VERSION = "${APP_SHORT_VERSION}";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.owncloud.ios-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nbntelecom.cloud";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-16";
@@ -5454,7 +5454,7 @@
 					OCLocalizedFormat,
 				);
 				MARKETING_VERSION = "${APP_SHORT_VERSION}";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.owncloud.ios-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nbntelecom.cloud";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.owncloud.ios-app";
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-16";
@@ -5541,7 +5541,7 @@
 				MARKETING_VERSION = "${APP_SHORT_VERSION}";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.owncloud.ios-app.ownCloud-Action-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nbntelecom.cloud.ownCloud-Action-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -5585,7 +5585,7 @@
 				);
 				MARKETING_VERSION = "${APP_SHORT_VERSION}";
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.owncloud.ios-app.ownCloud-Action-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nbntelecom.cloud.ownCloud-Action-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.owncloud.ios-app.ownCloud-Action-Extension";
 				SKIP_INSTALL = YES;
@@ -5713,7 +5713,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.owncloud.ios-app.ownCloud-Intents";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nbntelecom.cloud.ownCloud-Intents";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -5744,7 +5744,7 @@
 					OCLocalizedString,
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.owncloud.ios-app.ownCloud-Intents";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nbntelecom.cloud.ownCloud-Intents";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.owncloud.ios-app.ownCloud-Intents";
 				SKIP_INSTALL = YES;
@@ -5781,7 +5781,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.owncloud.ios-app.ownCloud-File-ProviderUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nbntelecom.cloud.ownCloud-File-ProviderUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -5812,7 +5812,7 @@
 					OCLocalizedString,
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.owncloud.ios-app.ownCloud-File-ProviderUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nbntelecom.cloud.ownCloud-File-ProviderUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.owncloud.ios-app.ownCloud-File-ProviderUI";
 				SKIP_INSTALL = YES;
@@ -6007,7 +6007,7 @@
 					OCLocalizedFormat,
 					OCLocalizedString,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.owncloud.ios-app.ownCloud-File-Provider";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nbntelecom.cloud.ownCloud-File-Provider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -6037,7 +6037,7 @@
 					OCLocalizedFormat,
 					OCLocalizedString,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.owncloud.ios-app.ownCloud-File-Provider";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nbntelecom.cloud.ownCloud-File-Provider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.owncloud.ios-app.ownCloud-File-Provider";
 				SKIP_INSTALL = YES;
@@ -6075,7 +6075,7 @@
 				MARKETING_VERSION = "${APP_SHORT_VERSION}";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.owncloud.ios-app.ownCloud-Share-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nbntelecom.cloud.ownCloud-Share-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
@@ -6109,7 +6109,7 @@
 				);
 				MARKETING_VERSION = "${APP_SHORT_VERSION}";
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.owncloud.ios-app.ownCloud-Share-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nbntelecom.cloud.ownCloud-Share-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.owncloud.ios-app.ownCloud-Share-Extension";
 				SKIP_INSTALL = YES;
