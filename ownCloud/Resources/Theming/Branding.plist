@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+	NBN Cloud: marca do app (chaves em doc/configuration.adoc, seção branding).
+	Baseado no ownCloud iOS (GPLv3). Este arquivo segue a mesma licença.
+-->
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>branding.app-name</key>
+	<string>NBN Cloud</string>
+	<key>branding.organization-name</key>
+	<string>NBN Telecom</string>
+
+	<!-- Servidor SUGERIDO ao adicionar conta: o campo vem preenchido e pode ser trocado; várias contas,
+	     em servidores diferentes (ownCloud clássico e Infinite Scale). -->
+	<key>branding.profile-url</key>
+	<string>https://cloud.nbntelecom.com.br</string>
+	<key>branding.profile-allow-url-configuration</key>
+	<true/>
+	<key>branding.can-add-account</key>
+	<true/>
+	<key>branding.can-edit-account</key>
+	<true/>
+
+	<!-- Sem pedido de avaliação e sem os links do ownCloud (a NBN ainda não tem ajuda nem política de privacidade
+	     próprias). URL vazia esconde o item nas configurações. -->
+	<key>branding.enable-review-prompt</key>
+	<false/>
+	<key>branding.url-help</key>
+	<string></string>
+	<key>branding.url-privacy</key>
+	<string></string>
+	<key>branding.send-feedback-address</key>
+	<string></string>
+	<key>branding.send-feedback-url</key>
+	<string></string>
+
+	<!-- "Documentação" abre a página do fork (o que é, servidores, código-fonte); "Termos de uso", a licença. -->
+	<key>branding.url-documentation</key>
+	<string>https://github.com/NBN-PATRIC/nbn-cloud-ios/tree/HEAD/branding#readme</string>
+	<key>branding.url-terms-of-use</key>
+	<string>https://github.com/NBN-PATRIC/nbn-cloud-ios/blob/HEAD/LICENSE</string>
+
+	<!-- Cores do timbrado da NBN -->
+	<key>branding.theme-colors</key>
+	<dict>
+		<key>tint-color</key>
+		<string>#4472C3</string>
+		<key>branding-background-color</key>
+		<string>#1F2A44</string>
+		<key>setup-status-bar-style</key>
+		<string>white</string>
+		<key>folder-icon-color</key>
+		<string>#4472C3</string>
+	</dict>
+
+	<!-- Lidas pelo fastlane (build_ipa_in_house) na hora de assinar; a identidade já está aplicada no projeto
+	     por branding/ios/aplicar-identidade.sh. O retorno do login (oc://) continua o do ownCloud, que os
+	     servidores já trazem cadastrado. -->
+	<key>build.app-group-identifier</key>
+	<string>group.br.com.nbntelecom.cloud</string>
+	<key>build.custom-app-scheme</key>
+	<string>nbncloud</string>
+</dict>
 </plist>
